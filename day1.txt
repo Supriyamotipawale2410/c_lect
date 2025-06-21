@@ -1,0 +1,13 @@
+introduction to c, features of c
+variables
+rules for variables
+assignment operator
+arithmetic operator
+relational operator
+sizeof() operator
+if else
+for, while, do while
+break and continue
+const
+increment, decrement in char-(AtoZ or ZtoA),int
+
