@@ -1,0 +1,154 @@
+Arrays
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+To create an array, define the data type (like int) and specify the name of the array followed by square brackets [].
+
+To insert values to it, use a comma-separated list inside curly braces, and make sure all values are of the same data type.
+----------------------
+
+int myNumbers[] = {25, 50, 75, 100};
+
+Access the Elements of an Array
+To access an array element, refer to its index number.
+
+Array indexes start with 0: [0] is the first element. [1] is the second element, etc.
+
+This statement accesses the value of the first element [0] in myNumbers
+
+int myNumbers[] = {25, 50, 75, 100};
+printf("%d", myNumbers[0]);
+
+------------------------------
+Change an Array Element
+To change the value of a specific element, refer to the index number
+
+int myNumbers[] = {25, 50, 75, 100};
+myNumbers[0] = 33;
+
+printf("%d", myNumbers[0]);
+-------------------------------
+
+Loop Through an Array
+You can loop through the array elements with the for loop.
+
+int myNumbers[] = {25, 50, 75, 100};
+int i;
+
+for (i = 0; i < 4; i++) {
+  printf("%d\n", myNumbers[i]);
+}
+
+--------------------
+Set Array Size
+Another common way to create arrays, is to specify the size of the array, and add elements later:
+
+Example
+// Declare an array of four integers:
+int myNumbers[4];
+
+// Add elements
+myNumbers[0] = 25;
+myNumbers[1] = 50;
+myNumbers[2] = 75;
+myNumbers[3] = 100;
+***********
+	Using this method, you should know the number of array elements in advance, in order for the program to store enough memory.
+
+	You are not able to change the size of the array after creation
+***********
+Avoid Mixing Data Types
+It is important to note that all elements in an array must be of the same data type.
+
+int myArray[] = {25, 50, 75, 3.15, 5.99};
+
+the values 3.15 and 5.99 will be truncated to 3 and 5. In some cases it might also result in an error, so it is important to always make sure that the elements in the array are of the same type.
+
+Get Array Size or Length
+To get the size of an array, you can use the sizeof operator
+
+int myNumbers[] = {10, 25, 50, 75, 100};
+printf("%zu", sizeof(myNumbers)); 
+
+It is because the sizeof operator returns the size of a type in bytes.
+
+You learned from the Data Types chapter that an int type is usually 4 bytes, so from the example above, 4 x 5 (4 bytes x 5 elements) = 20 bytes.
+
+
+
+
+
+
+
+========================================================================================================
+========================================================================================================
+C Functions
+A function in C is a set of statements that, when called, perform some specific tasks. It is the basic building block of a C program that provides modularity and code reusability. They are also called subroutines or procedures in other languages.
+---------------
+
+Modularity:
+Functions promote modularity by breaking down code into independent units.
+Reusability:
+Functions can be called multiple times from different parts of the program, avoiding code duplication.
+Readability:
+Functions make code easier to read and understand by organizing it into logical blocks.
+Maintainability:
+Functions simplify code maintenance by allowing changes to be made in one place without affecting other parts of the program.
+-----------
+Function Definition
+A function definition informs the compiler about the function's name, its return type, and what it does. It is compulsory to define a function before it can be called.
+
+return_type name () {
+    // Body of function
+};
+
+where,
+
+return_type: type of value the function return.
+name: Name of the function
+Body of function: Statements inside curly brackets { } are executed when function call.
+
+void hello(){
+    printf("Hello World.....");
+}
+--------------
+Function Call
+After defining a function, you can use it anywhere in the program by simply calling it with its name followed by parentheses ().
+
+#include <stdio.h>
+
+// Function definition
+void hello() {
+    printf("Hello World..");
+}
+
+int main() {
+
+    // Function call
+    hello();
+    return 0;
+}
+-----------------
+Return Type of Functions
+A function can return a value to its caller as a result. It is called the return value, and the type of this value is called return type of the function. The function only returns one value, and the value type is the same as the function's return type.
+
+The return keyword is used to return some values from the function.
+
+#include <stdio.h>
+
+int getNumber(){
+    int num = 3;
+    return num;
+}
+
+int main() {
+    
+        printf("%d", getNumber());
+
+	//or
+
+	int num1 = getNumber();
+	printf("%d", num1);
+    return 0;
+}
+--------------------------
+
